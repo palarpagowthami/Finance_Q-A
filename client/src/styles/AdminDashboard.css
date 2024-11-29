@@ -1,0 +1,183 @@
+.admin-dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.dashboard-header {
+    margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+    color: var(--text-primary);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.stats-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+}
+
+.stat-card h3 {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    color: var(--text-primary);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tab-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: var(--background-light);
+    color: var(--text-secondary);
+}
+
+.tab-button.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.pending-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.pending-post-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.post-info {
+    flex: 1;
+}
+
+.post-info h3 {
+    color: var(--text-primary);
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+.post-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.post-author {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.post-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.approve-btn, .reject-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.approve-btn {
+    background: var(--success-color);
+    color: white;
+}
+
+.reject-btn {
+    background: var(--danger-color);
+    color: white;
+}
+
+.stats-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-md);
+}
+
+.tag-distribution {
+    margin-top: 1.5rem;
+}
+
+.tag-stat {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.tag-name {
+    width: 120px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.tag-bar {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    min-width: 40px;
+    text-align: right;
+    transition: width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .pending-post-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .post-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+} 
